@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              Bittersweet: "#fcae61",
+              DarkBlue: "#242f51",
+              Blue: "#2500f9",
+              softBlue: "#2563ff",
+              SoftDark: "#616368",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/28ecceccdf.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Splide JS -->
+    <script src="./splide-4.0.1/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="splide-4.0.1/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="./splide-4.0.1/dist/css/splide-core.min.css" />
+
+    <!-- Javascript -->
+    <script src="./app.js" defer></script>
+
+    <title>Home Page</title>
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav
+      class="container mx-auto px-10 mt-5 flex items-center md:justify-between justify-center"
+    >
+      <h1 class="text-3xl font-bold relative">
+        <span class="text-Bittersweet">App</span
+        ><span class="text-DarkBlue">Lab</span>
+      </h1>
+
+      <i
+        class="fa-solid fa-bars text-Blue md:invisible block absolute top-7 right-6"
+      ></i>
+      <ul class="md:flex hidden items-center gap-10">
+        <li
+          class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
+        >
+          <a href="#home">Home</a>
+        </li>
+        <li
+          class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
+        >
+          <a href="#features">Key Features</a>
+        </li>
+        <li
+          class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
+        >
+          <a href="pricing">Pricing</a>
+        </li>
+        <li
+          class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
+        >
+          <a href="testiminial">Testiminial</a>
+        </li>
+        <li
+          class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
+        >
+          <a href="faq">FAQ</a>
+        </li>
+
+        <button
+          class="bg-Blue text-white px-6 py-3 rounded-full text-base font-bold hover:animate-pulse lg:block hidden"
+        >
+          Try for free
+        </button>
+      </ul>
+    </nav>
+
+    <!-- header -->
+    <header
+      class="container mx-auto px-10 flex lg:flex-row flex-col-reverse justify-between items-center mt-10 relative"
+      id="home"
+    >
+      <article class="lg:text-left text-center">
+        <div class="flex items-center gap-2 lg:justify-start justify-center">
+          <img
+            class="md:block hidden"
+            src="./img/header-ico-1.png"
+            alt=""
+            width="40"
+          />
+          <h4 class="text-lg font-semibold text-DarkBlue">
+            #1 Editiors Choice App of 2020
+          </h4>
+        </div>
+
+        <h1 class="md:text-6xl text-3xl font-bold text-DarkBlue mt-5">
+          Best app for your
+          <br />
+          modern lifestyle
+        </h1>
+
+        <h5 class="font-normal lg:text-lg text-base text-SoftDark mt-5">
+          Increase productivity with a simple to-do app. app for<br />managing
+          your personal budgets.
+        </h5>
+
+        <div
+          class="mt-5 flex md:flex-row flex-col gap-3 lg:justify-start justify-center"
+        >
+          <button
+            class="bg-Blue text-white font-bold text-base px-7 py-3 rounded-full hover:animate-pulse"
+          >
+            Try for free
+          </button>
+
+          <button class="font-bold text-base text-Blue ml-7">
+            Watch demo video
+          </button>
+        </div>
+
+        <div class="ico lg:visible invisible">
+          <img
+            class="absolute bottom-10 right-5"
+            src="./img/header-ico-2.png"
+            alt=""
+            width="30"
+          />
+          <img
+            class="absolute bottom-5 left-32"
+            src="./img/header-ico-2.png"
+            alt=""
+            width="30"
+          />
+          <img
+            class="absolute top-0 right-32"
+            src="./img/header-ico-2.png"
+            alt=""
+            width="30"
+          />
+          <i
+            class="fa-solid fa-plus absolute text-blue-500 fa-2x bottom-20 left-80"
+          ></i>
+          <i
+            class="fa-solid fa-circle-notch absolute fa-2x text-gray-300 top-20 left-20"
+          ></i>
+        </div>
+      </article>
+
+      <img class="block lg:mx-0 mx-auto" src="./img/header.png" alt="" />
+    </header>
+
+    <article class="md:mt-20 mt-10 container mx-auto">
+      <h3 class="text-DarkBlue text-lg font-semibold text-center">
+        Trusted by companies like
+      </h3>
+
+      <section class="splide my-5" aria-labelledby="carousel-heading">
+        <div class="splide__arrows splide__arrows--ltr">
+          <button
+            class="splide__arrow splide__arrow--prev"
+            type="button"
+            aria-label="Previous slide"
+            aria-controls="splide01-track"
+          ></button>
+          <button
+            class="splide__arrow splide__arrow--next"
+            type="button"
+            aria-label="Next slide"
+            aria-controls="splide01-track"
+          ></button>
+        </div>
+
+        <div class="splide__track lg:mx-0 mx-10">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img class="block mx-auto" src="./img/header-slide.png" alt="" />
+            </li>
+
+            <li class="splide__slide">
+              <img
+                class="block mx-auto"
+                src="./img/header-slide-02.png"
+                alt=""
+              />
+            </li>
+
+            <li class="splide__slide">
+              <img
+                class="block mx-auto"
+                src="./img/header-slide-03.png"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </article>
+
+    <main class="container mx-auto">
+      <!-- Key Features -->
+      <section id="features" class="md:my-40 my-20">
+        <article
+          class="md:grid md:grid-cols-2 md:text-left text-center items-center lg:gap-40"
+        >
+          <img src="./img/features-img-1.png" alt="" />
+
+          <div>
+            <h1 class="text-DarkBlue font-bold text-4xl">
+              Awesome apps
+              <br />
+              features
+            </h1>
+
+            <h4 class="text-SoftDark font-semibold text-base mt-5">
+              Increase productivity with a simple to-do app. <br />
+              app for managing your personal budgets.
+            </h4>
+
+            <div class="flex md:flex-row flex-col items-center gap-10 mt-10">
+              <i class="fa-solid fa-gauge-high fa-5x text-red-500"></i>
+              <div>
+                <h3 class="text-red-500 text-xl font-bold">Fast Performance</h3>
+                <h4 class="text-SoftDark text-base font-semibold mt-3">
+                  Get your blood tests delivered at
+                  <br />
+                  home collect a sample from the
+                  <br />
+                  news your blood tests.
+                </h4>
+              </div>
+            </div>
+
+            <div class="flex md:flex-row flex-col items-center gap-10 mt-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-codesandbox"
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#2563ff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M20 7.5v9l-4 2.25l-4 2.25l-4 -2.25l-4 -2.25v-9l4 -2.25l4 -2.25l4 2.25z"
+                />
+                <path d="M12 12l4 -2.25l4 -2.25" />
+                <line x1="12" y1="12" x2="12" y2="21" />
+                <path d="M12 12l-4 -2.25l-4 -2.25" />
+                <path d="M20 12l-4 2v4.75" />
+                <path d="M4 12l4 2l0 4.75" />
+                <path d="M8 5.25l4 2.25l4 -2.25" />
+              </svg>
+              <div>
+                <h3 class="text-softBlue text-xl font-bold">Prototyping</h3>
+                <h4 class="text-SoftDark text-base font-semibold mt-3">
+                  Get your blood tests delivered at
+                  <br />
+                  home collect a sample from the
+                  <br />
+                  news your blood tests.
+                </h4>
+              </div>
+            </div>
+
+            <div class="flex md:flex-row flex-col items-center gap-10 mt-10">
+              <i class="fa-solid fa-pen-ruler fa-5x text-green-500"></i>
+              <div>
+                <h3 class="text-green-500 text-xl font-bold">Vector Editing</h3>
+                <h4 class="text-SoftDark text-base font-semibold mt-3">
+                  Get your blood tests delivered at
+                  <br />
+                  home collect a sample from the
+                  <br />
+                  news your blood tests.
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="md:mt-40 mt-10 flex lg:flex-row flex-col justify-center items-center lg:gap-40 gap-7"
+        >
+          <h1
+            class="lg:text-5xl md:text-6xl text-3xl font-bold text-DarkBlue lg:text-left text-center"
+          >
+            Smart jackpots that
+            <br />
+            you may love this
+            <br />
+            anytime & anywhere
+          </h1>
+
+          <span class="lg:border lg:border-gray-300 lg:h-40"></span>
+
+          <h4
+            class="font-medium lg:text-base md:text-2xl text-base text-SoftDark lg:text-left text-center"
+          >
+            The rise of mobile devices transforms the way we
+            <br />
+            consume information entirely and the world's most
+            <br />
+            elevant channels such as Facebook.
+          </h4>
+        </article>
+
+        <article
+          class="lg:mt-40 md:mt-20 mt-10 flex md:flex-row flex-col lg:gap-40 gap-10 justify-center lg:text-left text-center px-10"
+        >
+          <div>
+            <i
+              class="fa-solid fa-hand-holding-dollar fa-4x text-red-500 mb-5"
+            ></i>
+            <h4 class="text-red-500 font-semibold text-xl">
+              Automatic Payouts
+            </h4>
+            <h5 class="text-SoftDark font-medium">
+              Get your blood tests delivered at home collect a sample from the
+              news your blood tests.
+            </h5>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-diagram-project fa-4x text-Blue mb-5"></i>
+            <h4 class="text-Blue font-semibold text-xl mb-5">
+              Automatic Payouts
+            </h4>
+            <h5 class="text-SoftDark font-medium">
+              Get your blood tests delivered at home collect a sample from the
+              news your blood tests.
+            </h5>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-thumbs-up fa-4x text-green-500 mb-5"></i>
+            <h4 class="text-green-500 font-semibold text-xl">
+              Automatic Payouts
+            </h4>
+            <h5 class="text-SoftDark font-medium">
+              Get your blood tests delivered at home collect a sample from the
+              news your blood tests.
+            </h5>
+          </div>
+        </article>
+
+        <article
+          class="lg:mt-40 md:mt-20 mt-10 flex lg:flex-row flex-col items-center lg:gap-40 gap:20 lg:text-left text-center"
+        >
+          <img src="./img/features-img-2.png" alt="" />
+
+          <div>
+            <h1 class="text-4xl font-bold text-DarkBlue">
+              Designed & built by
+              <br />
+              the latest code
+              <br />
+              integration
+            </h1>
+
+            <h4 class="font-medium text-SoftDark my-5">
+              The rise of mobile devices transforms the way we
+              <br />
+              consume information entirely and the world's most
+              <br />
+              elevant channels such as Facebook.
+            </h4>
+            <button class="bg-Blue px-7 py-3 text-white font-bold rounded-full">
+              Learn more
+            </button>
+          </div>
+        </article>
+
+        <article class="lg:mt-40 md:mt-20 mt-10">
+          <h1
+            class="text-3xl lg:text-5xl md:text-4xl font-bold text-DarkBlue text-center"
+          >
+            Why you should choose
+            <br />
+            our app
+          </h1>
+          <p class="text-center my-5 font-semibold text-SoftDark">
+            The rise of mobile devices transforms the way we consume information
+            entirely and
+            <br />
+            the world's most elevant channels such as Facebook.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
