@@ -75,7 +75,7 @@
         <li
           class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
         >
-          <a href="pricing">Pricing</a>
+          <a href="#pricing">Pricing</a>
         </li>
         <li
           class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
@@ -413,7 +413,9 @@
           </p>
         </article>
 
-        <article class="grid grid-cols-3 justify-items-center gap-10 my-10">
+        <article
+          class="grid lg:grid-cols-3 md:grid-cols-2 justify-items-center gap-10 my-10"
+        >
           <div class="text-center">
             <i class="fa-brands fa-app-store fa-4x text-SoftDark"></i>
             <h1 class="font-bold text-DarkBlue my-2">App Development</h1>
@@ -468,7 +470,79 @@
             </p>
           </div>
         </article>
+
+        <article
+          class="my-20 flex lg:flex-row flex-col-reverse justify-center items-center gap-10 px-10"
+        >
+          <div>
+            <h1
+              class="text-4xl font-bold text-DarkBlue lg:text-left text-center"
+            >
+              Ultimate features <br />
+              that we built
+            </h1>
+
+            <p class="text-SoftDark my-3 lg:text-left text-center">
+              The rise of mobile devices transforms the way we consume
+              <br />
+              information entirely.
+            </p>
+
+            <div
+              class="grid md:grid-cols-2 lg:text-left text-center gap-10 my-10"
+            >
+              <div>
+                <i class="fa-brands fa-app-store fa-4x text-SoftDark"></i>
+                <h1 class="font-bold text-DarkBlue my-2">App Development</h1>
+                <p class="text-SoftDark">
+                  Get your blood tests delivered at home collect a sample from
+                  the news your blood tests.
+                </p>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-award fa-4x text-SoftDark"></i>
+                <h1 class="font-bold text-DarkBlue my-2">10 Times Award</h1>
+                <p class="text-SoftDark">
+                  Get your blood tests delivered at home collect a sample from
+                  the news your blood tests.
+                </p>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-cloud-arrow-up fa-4x text-SoftDark"></i>
+                <h1 class="font-bold text-DarkBlue my-2">Cloud Storage</h1>
+                <p class="text-SoftDark">
+                  Get your blood tests delivered at home collect a sample from
+                  the news your blood tests.
+                </p>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-gear fa-4x text-SoftDark"></i>
+                <h1 class="font-bold text-DarkBlue my-2">Customization</h1>
+                <p class="text-SoftDark">
+                  Get your blood tests delivered at home collect a sample from
+                  the news your blood tests.
+                </p>
+              </div>
+            </div>
+
+            <button
+              class="bg-Blue px-7 py-3 text-white font-bold rounded-full lg:inline-block block mx-auto"
+            >
+              See all
+            </button>
+          </div>
+
+          <div>
+            <img class="lg:max-w-min" src="./img/features-img-3.png" alt="" />
+          </div>
+        </article>
       </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="md:my-40 my-20"></section>
     </main>
   </body>
 </html>

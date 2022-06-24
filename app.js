@@ -6,3 +6,5 @@ var splide = new Splide(".splide", {
 });
 
 splide.mount();
+
+console.log(window.innerWidth);
