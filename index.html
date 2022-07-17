@@ -17,6 +17,8 @@
               Blue: "#2500f9",
               softBlue: "#2563ff",
               SoftDark: "#616368",
+              borderLight: "#ebebeb",
+              footer: "#09142e",
             },
           },
         },
@@ -42,6 +44,9 @@
     <link rel="stylesheet" href="splide-4.0.1/dist/css/splide.min.css" />
     <link rel="stylesheet" href="./splide-4.0.1/dist/css/splide-core.min.css" />
 
+    <!-- css -->
+    <link rel="stylesheet" href="tailwind.css" />
+
     <!-- Javascript -->
     <script src="./app.js" defer></script>
 
@@ -60,6 +65,7 @@
 
       <i
         class="fa-solid fa-bars text-Blue md:invisible block absolute top-7 right-6"
+        id="hamburger-ico"
       ></i>
       <ul class="md:flex hidden items-center gap-10">
         <li
@@ -80,12 +86,12 @@
         <li
           class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
         >
-          <a href="testiminial">Testiminial</a>
+          <a href="#testiminial">Testiminial</a>
         </li>
         <li
           class="text-base font-semibold text-DarkBlue hover:cursor-pointer hover:text-Blue"
         >
-          <a href="faq">FAQ</a>
+          <a href="#faq">FAQ</a>
         </li>
 
         <button
@@ -93,6 +99,20 @@
         >
           Try for free
         </button>
+      </ul>
+    </nav>
+
+    <!-- nav Mobile -->
+    <nav class="md:hidden">
+      <ul
+        class="absolute flex-col hidden items-center gap-5 mt-5 bg-borderLight py-10 nav-anime w-full z-50"
+        id="nav-mobile"
+      >
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testiminial">Testiminial</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
 
@@ -175,6 +195,7 @@
         Trusted by companies like
       </h3>
 
+      <!-- splide -->
       <section class="splide my-5" aria-labelledby="carousel-heading">
         <div class="splide__arrows splide__arrows--ltr">
           <button
@@ -319,7 +340,7 @@
           <span class="lg:border lg:border-gray-300 lg:h-40"></span>
 
           <h4
-            class="font-medium lg:text-base md:text-2xl text-base text-SoftDark lg:text-left text-center"
+            class="font-medium lg:text-base md:text-2xl text-base text-SoftDark lg:text-left text-center md:mx-0 mx-5"
           >
             The rise of mobile devices transforms the way we
             <br />
@@ -374,7 +395,9 @@
           <img src="./img/features-img-2.png" alt="" />
 
           <div>
-            <h1 class="text-3xl md:text-5xl font-bold text-DarkBlue">
+            <h1
+              class="text-3xl md:text-5xl font-bold text-DarkBlue lg:mt-0 mt-4"
+            >
               Designed & built by
               <br />
               the latest code
@@ -382,7 +405,7 @@
               integration
             </h1>
 
-            <h4 class="font-medium text-SoftDark my-5">
+            <h4 class="font-medium text-SoftDark my-5 md:mx-0 mx-5">
               The rise of mobile devices transforms the way we
               <br />
               consume information entirely and the world's most
@@ -397,14 +420,14 @@
 
         <article class="lg:mt-40 md:mt-20 mt-10">
           <h1
-            class="text-3xl lg:text-5xl md:text-4xl font-bold text-DarkBlue text-center"
+            class="text-3xl lg:text-5xl md:text-4xl font-bold text-DarkBlue text-center md:mx-0 mx-5"
           >
             Why you should choose
             <br />
             our app
           </h1>
           <p
-            class="text-center text-sm lg:text-xl my-7 font-semibold text-SoftDark"
+            class="text-center text-sm lg:text-xl my-7 font-semibold text-SoftDark lg:mx-0 mx-5"
           >
             The rise of mobile devices transforms the way we consume information
             entirely and
@@ -542,7 +565,509 @@
       </section>
 
       <!-- Pricing -->
-      <section id="pricing" class="md:my-40 my-20"></section>
+      <section id="pricing" class="md:my-40 my-20">
+        <h1 class="text-center font-bold text-4xl text-DarkBlue">
+          Get awesome features, without
+          <br />
+          extra charges
+        </h1>
+
+        <p
+          class="text-center mt-5 text-SoftDark font-semibold md:text-lg text-base md:mx-0 mx-5"
+        >
+          The rise of mobile devices transforms the way we consume information
+          <br />
+          entirely and the world's most elevant channels such as Facebook.
+        </p>
+
+        <article id="article">
+          <div class="flex justify-center md:gap-5 gap-3 my-10" id="activeBtn">
+            <button
+              id="btnPrice"
+              class="px-7 py-3 text-SoftDark font-bold rounded-full active"
+            >
+              Monthly
+            </button>
+            <button
+              id="btnPrice"
+              class="px-7 py-3 text-SoftDark font-bold rounded-full"
+            >
+              Annually
+            </button>
+          </div>
+
+          <div
+            class="flex justify-center md:flex-row flex-col gap-20 tab"
+            id="tab"
+          >
+            <div
+              class="text-center border-solid border-2 border-borderLight rounded-2xl p-10"
+            >
+              <h1 class="text-6xl font-semibold text-DarkBlue">
+                $150<span class="text-lg font-medium text-SoftDark"
+                  >/month</span
+                >
+              </h1>
+              <h3 class="font-semibold text-DarkBlue mt-6">Business Class</h3>
+              <h4 class="text-SoftDark mb-10">For small teams or office</h4>
+
+              <ul class="text-SoftDark text-base">
+                <li>Drag & Drop Builder</li>
+                <li class="my-3">1,000's of Templates</li>
+                <li>Blog Support Tools</li>
+                <li class="my-3">eCommerce Store</li>
+              </ul>
+
+              <button
+                class="px-7 py-3 text-white font-bold rounded-full bg-Blue my-7"
+              >
+                Start free trail
+              </button>
+            </div>
+
+            <div
+              class="text-center border-solid border-2 border-borderLight rounded-2xl p-10"
+            >
+              <h1 class="text-6xl font-semibold text-DarkBlue">
+                $300<span class="text-lg font-medium text-SoftDark"
+                  >/month</span
+                >
+              </h1>
+              <h3 class="font-semibold text-DarkBlue mt-6">Pro Master</h3>
+              <h4 class="text-SoftDark mb-10">For Best opportunities</h4>
+
+              <ul class="text-SoftDark text-base">
+                <li>Drag & Drop Builder</li>
+                <li class="my-3">1,000's of Templates</li>
+                <li>Blog Support Tools</li>
+                <li class="my-3">eCommerce Store</li>
+              </ul>
+
+              <button
+                class="px-7 py-3 text-white font-bold rounded-full bg-Blue my-7"
+              >
+                Subscribe Now
+              </button>
+
+              <h4 class="text-Blue font-semibold">Or Start 14 days trail</h4>
+            </div>
+          </div>
+
+          <div class="flex justify-center md:flex-row flex-col gap-20" id="tab">
+            <div
+              class="text-center border-solid border-2 border-borderLight rounded-2xl p-10"
+            >
+              <h1 class="text-6xl font-semibold text-DarkBlue">
+                $0<span class="text-lg font-medium text-SoftDark">/month</span>
+              </h1>
+              <h3 class="font-semibold text-DarkBlue mt-6">Business Class</h3>
+              <h4 class="text-SoftDark mb-10">For small teams or office</h4>
+
+              <ul class="text-SoftDark text-base">
+                <li>Drag & Drop Builder</li>
+                <li class="my-3">1,000's of Templates</li>
+                <li>Blog Support Tools</li>
+                <li class="my-3">eCommerce Store</li>
+              </ul>
+
+              <button
+                class="px-7 py-3 text-white font-bold rounded-full bg-Blue my-7"
+              >
+                Start free trail
+              </button>
+            </div>
+
+            <div
+              class="text-center border-solid border-2 border-borderLight rounded-2xl p-10"
+            >
+              <h1 class="text-6xl font-semibold text-DarkBlue">
+                $99<span class="text-lg font-medium text-SoftDark">/month</span>
+              </h1>
+              <h3 class="font-semibold text-DarkBlue mt-6">Pro Master</h3>
+              <h4 class="text-SoftDark mb-10">For Best opportunities</h4>
+
+              <ul class="text-SoftDark text-base">
+                <li>Drag & Drop Builder</li>
+                <li class="my-3">1,000's of Templates</li>
+                <li>Blog Support Tools</li>
+                <li class="my-3">eCommerce Store</li>
+              </ul>
+
+              <button
+                class="px-7 py-3 text-white font-bold rounded-full bg-Blue my-7"
+              >
+                Subscribe Now
+              </button>
+
+              <h4 class="text-Blue font-semibold">Or Start 14 days trail</h4>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Testiminial -->
+      <section id="testiminial" class="md:my-40 my-20">
+        <article
+          class="flex justify-center items-center lg:flex-row flex-col gap-5"
+        >
+          <img
+            class="lg:max-w-lg w-full"
+            src="./img/Testiminial-img-1.png"
+            alt=""
+          />
+
+          <div class="text-center mx-5">
+            <h1 class="md:text-5xl text-4xl text-DarkBlue font-bold">
+              Meet Client Satisfaction by using product
+            </h1>
+            <h4 class="font-medium text-SoftDark my-5">
+              The rise of mobile devices transforms the way we consume.
+              <br />
+              elevant channels such as Facebook.
+            </h4>
+
+            <ul class="text-yellow-400">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </ul>
+
+            <h3 class="text-DarkBlue font-medium my-5">
+              User friendly & Customizable
+            </h3>
+            <p class="text-SoftDark">
+              Bring to the table win-win survival strategies to ensure proactive
+              domination. At the end of the day, going forward, a new normal
+              that has evolved from generation X is on the runway heading
+              towards a streamlined cloud solution. User generated content in
+              real-time will have multiple touchpoints for offshoring.
+            </p>
+
+            <!-- Splide -->
+            <section class="splide mt-5" aria-labelledby="carousel-heading">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li
+                    class="splide__slide flex lg:justify-start justify-center items-center gap-5"
+                  >
+                    <img
+                      class="w-20 h-20 rounded-full"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                      alt=""
+                    />
+
+                    <div>
+                      <h3 class="text-DarkBlue font-semibold">
+                        Leona Thompson
+                      </h3>
+                      <h3 class="text-SoftDark font-medium">
+                        CEO of Pixler Lab
+                      </h3>
+                    </div>
+                  </li>
+
+                  <li
+                    class="splide__slide flex items-center lg:justify-start justify-center gap-5"
+                  >
+                    <img
+                      class="w-20 h-20 rounded-full"
+                      src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                      alt=""
+                    />
+
+                    <div>
+                      <h3 class="text-DarkBlue font-semibold">
+                        Patricia Penton
+                      </h3>
+                      <h3 class="text-SoftDark font-medium">
+                        CEO of Pixler Lab
+                      </h3>
+                    </div>
+                  </li>
+
+                  <li
+                    class="splide__slide flex items-center lg:justify-start justify-center gap-5"
+                  >
+                    <img
+                      class="w-20 h-20 rounded-full"
+                      src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                      alt=""
+                    />
+
+                    <div>
+                      <h3 class="text-DarkBlue font-semibold">
+                        Angela Lindsey
+                      </h3>
+                      <h3 class="text-SoftDark font-medium">
+                        CEO of Pixler Lab
+                      </h3>
+                    </div>
+                  </li>
+                </ul>
+                <div
+                  class="splide__arrows flex gap-5 justify-end mr-5 lg:visible invisible"
+                >
+                  <button class="splide__arrow splide__arrow--prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+                  <button class="splide__arrow splide__arrow--next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="md:my-40 my-20 md:mx-40 mx-5">
+        <h1 class="text-DarkBlue font-bold md:text-5xl text-4xl text-center">
+          Frequently asked questions
+        </h1>
+
+        <p class="text-center mt-5 font-medium text-SoftDark">
+          The rise of mobile devices transforms the way we consume information
+          entirely
+          <br />
+          and the world's most elevant channels such as Facebook.
+        </p>
+
+        <article class="my-24">
+          <h3
+            class="text-DarkBlue font-semibold text-xl md:text-left text-center"
+          >
+            How to contact with riders emergency?
+          </h3>
+
+          <p
+            class="mt-5 font-medium text-SoftDark leading-8 lg:text-left text-center"
+          >
+            Leverage agile frameworks to provide a robust synopsis for high
+            level overviews. Iterative approaches to corporate strategy foster
+            collaborative thinking to further the overall value proposition.
+            Organically grow the holistic world view of disruptive innovation
+            via workplace diversity and empowerment. Bring to the table win-win
+            survival strategies to ensure proactive domination. At the end of
+            the day, going forward, a new normal that has evolved from
+            generation X is on the runway heading towards a streamlined cloud
+            solution. User generated content in real-time will have multiple
+            touchpoints for offshoring.
+          </p>
+        </article>
+
+        <article>
+          <!-- question-1 -->
+          <div class="cursor-pointer faq">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-DarkBlue">
+                App installation failed, how to update system information?
+              </h3>
+              <button class="btn">
+                <span class="plus">
+                  <i class="fa-solid fa-plus text-xl text-DarkBlue"></i>
+                </span>
+
+                <span class="minus">
+                  <i class="fa-solid fa-minus text-xl text-DarkBlue"></i>
+                </span>
+              </button>
+            </div>
+
+            <!-- answer-1 -->
+            <p class="mt-5 text-SoftDark answer">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Veritatis non accusamus voluptatem, ipsam eveniet perspiciatis,
+              exercitationem quidem, nam harum impedit atque eos ad! Quis
+              laborum quae quisquam accusantium sint vitae!
+            </p>
+          </div>
+
+          <!-- question-2 -->
+          <div class="cursor-pointer my-10 faq">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-DarkBlue">
+                Website reponse taking time, how to improve?
+              </h3>
+              <button class="btn">
+                <span class="plus">
+                  <i class="fa-solid fa-plus text-xl text-DarkBlue"></i>
+                </span>
+
+                <span class="minus">
+                  <i class="fa-solid fa-minus text-xl text-DarkBlue"></i>
+                </span>
+              </button>
+            </div>
+
+            <!-- answer-2 -->
+            <p class="mt-5 text-SoftDark answer">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Veritatis non accusamus voluptatem, ipsam eveniet perspiciatis,
+              exercitationem quidem, nam harum impedit atque eos ad! Quis
+              laborum quae quisquam accusantium sint vitae!
+            </p>
+          </div>
+
+          <!-- question-3 -->
+          <div class="cursor-pointer faq">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-DarkBlue">
+                New update fixed all bug and issues
+              </h3>
+              <button class="btn">
+                <span class="plus">
+                  <i class="fa-solid fa-plus text-xl text-DarkBlue"></i>
+                </span>
+
+                <span class="minus">
+                  <i class="fa-solid fa-minus text-xl text-DarkBlue"></i>
+                </span>
+              </button>
+            </div>
+
+            <!-- answer-3 -->
+            <p class="mt-5 text-SoftDark answer">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Veritatis non accusamus voluptatem, ipsam eveniet perspiciatis,
+              exercitationem quidem, nam harum impedit atque eos ad! Quis
+              laborum quae quisquam accusantium sint vitae!
+            </p>
+          </div>
+
+          <!-- question-4 -->
+          <div class="cursor-pointer my-10 faq">
+            <div class="flex justify-between items-center">
+              <h3 class="text-xl font-semibold text-DarkBlue">
+                How to contact with riders emergency?
+              </h3>
+              <button class="btn">
+                <span class="plus">
+                  <i class="fa-solid fa-plus text-xl text-DarkBlue"></i>
+                </span>
+
+                <span class="minus">
+                  <i class="fa-solid fa-minus text-xl text-DarkBlue"></i>
+                </span>
+              </button>
+            </div>
+
+            <!-- answer-4 -->
+            <p class="mt-5 text-SoftDark answer">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Veritatis non accusamus voluptatem, ipsam eveniet perspiciatis,
+              exercitationem quidem, nam harum impedit atque eos ad! Quis
+              laborum quae quisquam accusantium sint vitae!
+            </p>
+          </div>
+        </article>
+      </section>
     </main>
+
+    <article
+      class="md:my-40 my-20 flex justify-between items-center lg:flex-row flex-col-reverse gap-5"
+    >
+      <div class="lg:ml-10 mx-5">
+        <h1
+          class="text-DarkBlue font-bold md:text-5xl lg:text-left text-center text-4xl mb-5"
+        >
+          Download our App now!
+        </h1>
+
+        <p class="text-SoftDark font-medium">
+          The rise of mobile devices transforms the way we consume information
+          entirely and the world's most elevant channels such as Facebook.
+        </p>
+
+        <div class="my-10 flex lg:justify-start justify-center gap-5">
+          <a
+            class="md:w-1/4 w-1/2"
+            href="https://play.google.com/store/games"
+            target="_blank"
+            ><img src="./img/Google_Play_Store_badge_EN.svg.png" alt=""
+          /></a>
+
+          <a
+            class="md:w-1/4 w-1/2"
+            href="https://www.apple.com/app-store/"
+            target="_blank"
+            ><img src="./img/Download_on_the_App_Store_Badge.svg.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <img class="lg:max-w-xl w-full" src="./img/Faq-img-1.png" alt="" />
+    </article>
+
+    <footer class="md:mt-40 mt-14 bg-footer w-full py-40 relative">
+      <img
+        class="absolute top-10 left-1/2 md:block hidden"
+        width="30"
+        src="./img/header-ico-2.png"
+        alt=""
+      />
+      <img
+        class="absolute top-20 right-10 md:block hidden"
+        width="30"
+        src="./img/header-ico-2.png"
+        alt=""
+      />
+      <h1 class="text-3xl font-bold text-center">
+        <span class="text-Bittersweet">App</span
+        ><span class="text-white">Lab</span>
+      </h1>
+
+      <ul
+        class="flex md:flex-row flex-col items-center justify-center gap-7 text-white mt-10"
+      >
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#features">Key Features</a>
+        </li>
+        <li>
+          <a href="#pricing">Pricing</a>
+        </li>
+        <li>
+          <a href="#testiminial">Testiminial</a>
+        </li>
+        <li>
+          <a href="#faq">FAQ</a>
+        </li>
+      </ul>
+
+      <ul class="flex justify-center mt-20 gap-5">
+        <li>
+          <i
+            class="fa-brands fa-facebook-f cursor-pointer text-DarkBlue hover:text-white fa-2x"
+          ></i>
+        </li>
+        <li>
+          <i
+            class="fa-brands fa-instagram cursor-pointer text-DarkBlue hover:text-white fa-2x"
+          ></i>
+        </li>
+
+        <li>
+          <i
+            class="fa-brands fa-twitter cursor-pointer text-DarkBlue hover:text-white fa-2x"
+          ></i>
+        </li>
+
+        <li>
+          <i
+            class="fa-brands fa-pinterest-p cursor-pointer text-DarkBlue hover:text-white fa-2x"
+          ></i>
+        </li>
+      </ul>
+    </footer>
+
+    <a href="#home" class="hidden" id="scrollTop">
+      <i
+        class="fixed fa-solid fa-circle-arrow-up fa-3x right-14 bottom-10 text-cyan-500 animate-pulse cursor-none"
+      ></i>
+    </a>
   </body>
 </html>

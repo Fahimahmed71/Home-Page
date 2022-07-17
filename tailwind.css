@@ -5,4 +5,68 @@
   body {
     font-family: "Poppins", sans-serif;
   }
+
+  .active {
+    color: #fff !important;
+    background: #2500f9 !important;
+  }
+
+  .tab {
+    display: none !important;
+  }
+
+  .btn i:hover {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transition: 0.5s linear;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+  }
+
+  .minus {
+    display: none;
+  }
+
+  .toggle .minus {
+    display: inline;
+  }
+
+  .toggle .plus {
+    display: none;
+  }
+
+  .answer {
+    display: none;
+  }
+
+  .toggle .answer {
+    display: block;
+  }
+
+  .nav-anime {
+    animation: myAnim1 1.5s ease 0s normal forwards;
+  }
+
+  @keyframes myAnim1 {
+    0% {
+      opacity: 0;
+      transform: rotateX(-100deg);
+      transform-origin: top;
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+      transform-origin: top;
+    }
+  }
+
+  .hamburger {
+    transform: rotate(90deg);
+  }
 }
